@@ -2,8 +2,6 @@
 
 #### Introduction
 
-You are here because you are planning on deploying a new purl-server and destroying the old purl-server.
-
 - If you want to test an existing production purl server, refer to [this document](./PRODUCTION_TESTING_README.md).
 - If you want to get familiar with terraform, refer to [this document](../PROVISION_AWS_README.md).
 
@@ -44,7 +42,7 @@ These 2 are needed to deploy the purl-server using ansible.
   - Private ssh key for ansible to access the remote aws instance
 
 ```sh
-git clone https://github.com/OBOFoundry/purl.obolibrary.org.git
+git clone https://github.com/brain-bican/purl.brain-bican.org.git
 cd provision
 cp production/backend.tf.sample aws/backend.tf # Now modify it with the name of the s3 bucket and the aws profile if it is not default
 cp production/s3cfg.sample production/s3cfg    # Now populate this with the correct access/secret keys

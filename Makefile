@@ -155,7 +155,7 @@ test-examples: test-example1 test-example2
 ### Update Repository
 #
 # Run the safe-update.py script which does the following:
-# - Check Travis-CI for the last build.
+# - Check Github Actions CI for the last build.
 # - If it did not pass, or if it is the same as the current build, then do nothing.
 # - Otherwise replace .current_build, pull from git, and run a new `make`.
 safe-update:

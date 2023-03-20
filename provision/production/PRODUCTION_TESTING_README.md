@@ -24,7 +24,7 @@ ps -ef                            # Make sure apache and crond are running
 Run tests and safe-update.
 
 ```sh
-cd /var/www/purl.obolibrary.org
+cd /var/www/purl.brain-bican.org
 sudo make all test
 sudo make safe-update
 ```

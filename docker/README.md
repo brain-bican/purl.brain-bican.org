@@ -14,7 +14,7 @@ The following tools should be available on the system.
 
 #### AWS S3 Credentials
 
-Prepare The s3 credential file needed for LogRotate. It should like so: 
+Prepare The s3 credential file (`s3cfg`) needed for LogRotate. It should like so: 
 
 ```sh
 [default]
@@ -39,7 +39,7 @@ docker image list | grep purl
 #### Launch Container
 
 Run interactively and access the web server using [http://localhost](http://localhost).
-Be sure to specify the absolute path to s3 credentials.
+Be sure to specify the absolute path to s3 credentials (`s3cfg`).
 
 ```sh
 docker run --name purl -v REPLACE_ME:/opt/credentials/s3cfg -p 80:80 -it purl:latest /bin/bash
