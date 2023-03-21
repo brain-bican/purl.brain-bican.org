@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Check Github CI build status for the `master` branch of OBOFoundry/purl.obolibrary.org
+# Check Github CI build status for the `master` branch of brain-bican/purl.brain-bican.org
 # If `master` is green (i.e. all tests are passing),
 # and the build number is greater than the current build
 # (i.e. the last time we updated),
