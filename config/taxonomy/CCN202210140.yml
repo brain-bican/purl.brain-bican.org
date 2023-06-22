@@ -1,4 +1,4 @@
-# PURL configuration for http://purl.brain-bican.org/taxonomy/CCN202210140
+# PURL configuration for https://purl.brain-bican.org/taxonomy/CCN202210140
 
 idspace: CCN202210140
 base_url: /taxonomy/CCN202210140
@@ -14,4 +14,4 @@ entries:
   replacement: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
 
 - exact: /cell_to_cell_set_assignments.csv
-  replacement: https://github.com/hkir-dev/whole_human_brain_ontology/raw/taxconfig_refactoring/src/cellxgene/h5ad-downloads/adult-human-brain_v1.zip
+  replacement: https://github.com/hkir-dev/whole_human_brain_ontology/raw/main/src/cellxgene/h5ad-downloads/adult-human-brain_v1.zip
