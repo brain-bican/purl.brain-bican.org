@@ -1,0 +1,38 @@
+# PURL configuration for https://purl.brain-bican.org/ontology/hbao
+# Human Brain Atlas Ontology (HBAO)
+
+idspace: HBA
+base_url: /ontology/hbao
+
+
+products:
+# https://purl.brain-bican.org/ontology/hbao/hbao.owl
+- hbao.owl: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/hbao.owl
+- hbao.obo: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/hbao.obo
+- hbao.json: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/hbao.obo
+
+term_browser: ols
+example_terms:
+- HBA_0000000
+
+entries:
+
+# https://purl.brain-bican.org/ontology/hbao/hbao-base.owl
+- exact: /hbao-base.owl
+  replacement: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/hbao-base.owl
+
+# https://purl.brain-bican.org/ontology/hbao/latest/hbao.owl
+- prefix: /latest/
+  replacement: https://github.com/brain-bican/human_brain_atlas_ontology/blob/main/
+
+# https://purl.brain-bican.org/ontology/hbao/releases/2022-11-02/hbao.owl
+- regex: ^/ontology/hbao/releases/(.*)/hbao\.owl$
+  replacement: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/$1/hbao.owl
+  tests:
+  - from: /hbao/releases/2022-11-02/hbao.owl
+    to: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/2022-11-02/hbao.owl
+
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/
