@@ -1,0 +1,38 @@
+# PURL configuration for https://purl.brain-bican.org/ontology/dmbao
+# Developing Mouse Brain Atlas Ontology (DMBAO)
+
+idspace: DMBA
+base_url: /ontology/dmbao
+
+
+products:
+# https://purl.brain-bican.org/ontology/dmbao/dmbao.owl
+- dmbao.owl: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/dmbao.owl
+- dmbao.obo: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/dmbao.obo
+- dmbao.json: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/dmbao.obo
+
+term_browser: ols
+example_terms:
+- DMBA_0000000
+
+entries:
+
+# https://purl.brain-bican.org/ontology/dmbao/dmbao-base.owl
+- exact: /dmbao-base.owl
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/dmbao-base.owl
+
+# https://purl.brain-bican.org/ontology/dmbao/latest/dmbao.owl
+- prefix: /latest/
+  replacement: https://github.com/brain-bican/developing_mouse_brain_atlas_ontology/blob/main/
+
+# https://purl.brain-bican.org/ontology/dmbao/releases/2022-11-02/dmbao.owl
+- regex: ^/ontology/dmbao/releases/(.*)/dmbao\.owl$
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/$1/dmbao.owl
+  tests:
+  - from: /dmbao/releases/2022-11-02/dmbao.owl
+    to: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/2022-11-02/dmbao.owl
+
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/
