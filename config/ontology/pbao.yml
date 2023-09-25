@@ -1,0 +1,38 @@
+# PURL configuration for https://purl.brain-bican.org/ontology/pbao
+# Primate Brain Atlas Ontology (PBAO)
+
+idspace: PBA
+base_url: /ontology/pbao
+
+
+products:
+# https://purl.brain-bican.org/ontology/pbao/pbao.owl
+- pbao.owl: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/pbao.owl
+- pbao.obo: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/pbao.obo
+- pbao.json: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/pbao.obo
+
+term_browser: ols
+example_terms:
+- PBA_0000000
+
+entries:
+
+# https://purl.brain-bican.org/ontology/pbao/pbao-base.owl
+- exact: /pbao-base.owl
+  replacement: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/pbao-base.owl
+
+# https://purl.brain-bican.org/ontology/pbao/latest/pbao.owl
+- prefix: /latest/
+  replacement: https://github.com/brain-bican/primate_brain_atlas_ontology/blob/main/
+
+# https://purl.brain-bican.org/ontology/pbao/releases/2022-11-02/pbao.owl
+- regex: ^/ontology/pbao/releases/(.*)/pbao\.owl$
+  replacement: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/$1/pbao.owl
+  tests:
+  - from: /pbao/releases/2022-11-02/pbao.owl
+    to: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/2022-11-02/pbao.owl
+
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/
