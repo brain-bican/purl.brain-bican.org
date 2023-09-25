@@ -1,0 +1,38 @@
+# PURL configuration for https://purl.brain-bican.org/ontology/mbao
+# Mouse Brain Atlas Ontology (MBAO)
+
+idspace: MBA
+base_url: /ontology/mbao
+
+
+products:
+# https://purl.brain-bican.org/ontology/mbao/mbao.owl
+- mbao.owl: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.owl
+- mbao.obo: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.obo
+- mbao.json: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.obo
+
+term_browser: ols
+example_terms:
+- MBA_0000000
+
+entries:
+
+# https://purl.brain-bican.org/ontology/mbao/mbao-base.owl
+- exact: /mbao-base.owl
+  replacement: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao-base.owl
+
+# https://purl.brain-bican.org/ontology/mbao/latest/mbao.owl
+- prefix: /latest/
+  replacement: https://github.com/brain-bican/mouse_brain_atlas_ontology/blob/main/
+
+# https://purl.brain-bican.org/ontology/mbao/releases/2022-11-02/mbao.owl
+- regex: ^/ontology/mbao/releases/(.*)/mbao\.owl$
+  replacement: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/$1/mbao.owl
+  tests:
+  - from: /mbao/releases/2022-11-02/mbao.owl
+    to: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/2022-11-02/mbao.owl
+
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/
