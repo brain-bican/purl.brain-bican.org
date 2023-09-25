@@ -1,0 +1,38 @@
+# PURL configuration for https://purl.brain-bican.org/ontology/dhbao
+# Developing Human Brain Atlas Ontology (DHBAO)
+
+idspace: DHBA
+base_url: /ontology/dhbao
+
+
+products:
+# https://purl.brain-bican.org/ontology/dhbao/dhbao.owl
+- dhbao.owl: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.owl
+- dhbao.obo: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
+- dhbao.json: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
+
+term_browser: ols
+example_terms:
+- DHBA_0000000
+
+entries:
+
+# https://purl.brain-bican.org/ontology/dhbao/dhbao-base.owl
+- exact: /dhbao-base.owl
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao-base.owl
+
+# https://purl.brain-bican.org/ontology/dhbao/latest/dhbao.owl
+- prefix: /latest/
+  replacement: https://github.com/brain-bican/developing_human_brain_atlas_ontology/blob/main/
+
+# https://purl.brain-bican.org/ontology/dhbao/releases/2022-11-02/dhbao.owl
+- regex: ^/ontology/dhbao/releases/(.*)/dhbao\.owl$
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/$1/dhbao.owl
+  tests:
+  - from: /dhbao/releases/2022-11-02/dhbao.owl
+    to: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/2022-11-02/dhbao.owl
+
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/
