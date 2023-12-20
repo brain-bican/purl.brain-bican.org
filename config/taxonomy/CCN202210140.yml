@@ -4,26 +4,27 @@ idspace: CCN202210140
 base_url: /taxonomy/CCN202210140
 
 products:
-- CS202210140.json: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/main/CS202210140.json
+- CS202210140_non-neuronal.json: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/main/CS202210140.json
+- CS202210140_neurons.json: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_neurons/main/CS202210140.json
 - CCN202210140.csv: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
 
 base_redirect: https://github.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal
 
 entries:
 
-# https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140.json
-- exact: /CS202210140.json
+# https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json
+- exact: /CS202210140_non-neuronal.json
   replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/main/CS202210140.json
 
-  # https://purl.brain-bican.org/taxonomy/CCN202210140/latest/CS202210140.json
-- prefix: /latest/
-  replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/main/
+# https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_neurons.json
+- exact: /CS202210140_neurons.json
+  replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_neurons/main/CS202210140.json
 
-# https://purl.brain-bican.org/taxonomy/CCN202210140/releases/2023-12-20/CS202210140.json
-- regex: ^/taxonomy/CCN202210140/releases/(.*)/CS202210140\.owl$
-  replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/$1/CS202210140.json
+# https://purl.brain-bican.org/taxonomy/CCN202210140/releases/2023-12-20/CS202210140_non-neuronal.json
+- regex: ^/taxonomy/CCN202210140/releases/(.*)/CS202210140_(.*)\.owl$
+  replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_$2/$1/CS202210140.json
   tests:
-  - from: /CCN202210140/releases/2023-12-20/CS202210140.json
+  - from: /CCN202210140/releases/2023-12-20/CS202210140_non-neuronal.json
     to: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/2023-12-20/CS202210140.json
 
 - exact: /CCN202210140.csv
@@ -34,4 +35,4 @@ entries:
 
 ## generic fall-through, serve direct from github by default
 - prefix: /
-  replacement: https://raw.githubusercontent.com/hkir-dev/human-brain-cell-atlas_v1_non-neuronal/main/
+  replacement: https://github.com/hkir-dev/human-brain-cell-atlas_v1_neurons/
