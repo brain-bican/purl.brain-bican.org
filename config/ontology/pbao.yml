@@ -23,7 +23,7 @@ entries:
 
 # https://purl.brain-bican.org/ontology/pbao/latest/pbao.owl
 - prefix: /latest/
-  replacement: https://github.com/brain-bican/primate_brain_atlas_ontology/blob/main/
+  replacement: https://raw.githubusercontent.com/brain-bican/primate_brain_atlas_ontology/main/
 
 # https://purl.brain-bican.org/ontology/pbao/releases/2022-11-02/pbao.owl
 - regex: ^/ontology/pbao/releases/(.*)/pbao\.owl$
