@@ -23,7 +23,7 @@ entries:
 
 # https://purl.brain-bican.org/ontology/dhbao/latest/dhbao.owl
 - prefix: /latest/
-  replacement: https://github.com/brain-bican/developing_human_brain_atlas_ontology/blob/main/
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/
 
 # https://purl.brain-bican.org/ontology/dhbao/releases/2022-11-02/dhbao.owl
 - regex: ^/ontology/dhbao/releases/(.*)/dhbao\.owl$
