@@ -23,7 +23,7 @@ entries:
 
 # https://purl.brain-bican.org/ontology/dmbao/latest/dmbao.owl
 - prefix: /latest/
-  replacement: https://github.com/brain-bican/developing_mouse_brain_atlas_ontology/blob/main/
+  replacement: https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/
 
 # https://purl.brain-bican.org/ontology/dmbao/releases/2022-11-02/dmbao.owl
 - regex: ^/ontology/dmbao/releases/(.*)/dmbao\.owl$
