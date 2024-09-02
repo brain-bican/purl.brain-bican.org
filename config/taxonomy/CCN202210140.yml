@@ -36,10 +36,10 @@ entries:
   
 # https://purl.brain-bican.org/taxonomy/CS202210140#CS202210140_464
 - regex: ^/taxonomy/CCN202210140#(.*)$
-  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/(.*)/
+  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/(.*)
   tests:
   - from: https://purl.brain-bican.org/taxonomy/CS202210140#CS202210140_464
-    to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/CS202210140_464/
+    to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/CS202210140_464
 
 - exact: /CCN202210140.csv
   replacement: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
