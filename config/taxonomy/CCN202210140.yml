@@ -8,7 +8,7 @@ products:
 - CS202210140_neurons.json: https://raw.githubusercontent.com/brain-bican/human-brain-cell-atlas_v1_neurons/main/CS202210140.json
 - CCN202210140.csv: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
 
-base_redirect: https://github.com/brain-bican/human-brain-cell-atlas_v1_non-neuronal
+base_redirect: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/
 
 entries:
 
@@ -26,6 +26,20 @@ entries:
   tests:
   - from: /CCN202210140/releases/2023-12-20/CS202210140_non-neuronal.json
     to: https://raw.githubusercontent.com/brain-bican/human-brain-cell-atlas_v1_non-neuronal/2023-12-20/CS202210140.json
+  
+# https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json#taxonomy
+- regex: ^/taxonomy/CCN202210140/CS202210140_(.*).json#taxonomy$
+  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1
+  tests:
+  - from: /CCN202210140/CS202210140_non-neuronal.json#taxonomy
+    to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal
+  
+# https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json#CS202210140_464
+- regex: ^/taxonomy/CCN202210140/CS202210140_(.*).json#(.*)$
+  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1/cell_sets/$2
+  tests:
+  - from: /CCN202210140/CS202210140_non-neuronal.json#CS202210140_464
+    to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/CS202210140_464
 
 - exact: /CCN202210140.csv
   replacement: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
@@ -35,4 +49,4 @@ entries:
 
 ## generic fall-through, serve direct from github by default
 - prefix: /
-  replacement: https://github.com/brain-bican/human-brain-cell-atlas_v1_neurons/
+  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/
