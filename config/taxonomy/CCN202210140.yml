@@ -31,14 +31,14 @@ entries:
 - regex: ^/taxonomy/CCN202210140/CS202210140_(.*).json#taxonomy$
   replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1
   tests:
-  - from: https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json#taxonomy
+  - from: /CCN202210140/CS202210140_non-neuronal.json#taxonomy
     to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal
   
 # https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json#CS202210140_464
 - regex: ^/taxonomy/CCN202210140/CS202210140_(.*).json#(.*)$
   replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1/cell_sets/$2
   tests:
-  - from: https://purl.brain-bican.org/taxonomy/CCN202210140/CS202210140_non-neuronal.json#CS202210140_464
+  - from: /CCN202210140/CS202210140_non-neuronal.json#CS202210140_464
     to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/CS202210140_464
 
 - exact: /CCN202210140.csv
