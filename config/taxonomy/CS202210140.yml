@@ -34,11 +34,11 @@ entries:
 #   - from: /CS202210140/CS202210140_non-neuronal/taxonomy
 #     to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal
   
-# https://purl.brain-bican.org/taxonomy/CS202210140_non-neuronal/CS202210140_464
-- regex: ^/taxonomy/CS202210140_(.*)/(.*)$
+# https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_non-neuronal/CS202210140_464
+- regex: ^/taxonomy/CS202210140/CS202210140_(.*)/(.*)$
   replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1/cell_sets/$2
   tests:
-  - from: /CS202210140_non-neuronal/CS202210140_464
+  - from: /CS202210140/CS202210140_non-neuronal/CS202210140_464
     to: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/cell_sets/CS202210140_464
 
 - exact: /CCN202210140.csv
