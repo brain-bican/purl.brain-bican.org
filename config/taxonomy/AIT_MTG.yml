@@ -1,4 +1,4 @@
-# PURL configuration for https://purl.bican.org/taxonomy/AIT_MTG
+# PURL configuration for https://purl.brain-bican.org/taxonomy/AIT_MTG
 
 idspace: AIT_MTG
 base_url: /taxonomy/AIT_MTG
@@ -10,11 +10,11 @@ base_redirect: https://github.com/brain-bican/human-neocortex-middle-temporal-gy
 
 entries:
 
-# https://purl.bican.org/taxonomy/AIT_MTG/AIT_MTG.json
+# https://purl.brain-bican.org/taxonomy/AIT_MTG/AIT_MTG.json
 - exact: /AIT_MTG.json
   replacement: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
 
-# https://purl.bican.org/taxonomy/AIT_MTG/releases/2023-09-24/AIT_MTG.json
+# https://purl.brain-bican.org/taxonomy/AIT_MTG/releases/2023-09-24/AIT_MTG.json
 - prefix: /releases/
   replacement: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/v
   tests:
