@@ -4,19 +4,27 @@ idspace: AIT_MTG
 base_url: /taxonomy/AIT_MTG
 
 products:
-- AIT_MTG.json: https://raw.githubusercontent.com/hkir-dev/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
+- AIT_MTG.json: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
 
-base_redirect: https://github.com/hkir-dev/human-neocortex-middle-temporal-gyrus
+base_redirect: https://github.com/brain-bican/human-neocortex-middle-temporal-gyrus
 
 entries:
 
 # https://purl.brain-bican.org/taxonomy/AIT_MTG/AIT_MTG.json
 - exact: /AIT_MTG.json
-  replacement: https://raw.githubusercontent.com/hkir-dev/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
+  replacement: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
 
 # https://purl.brain-bican.org/taxonomy/AIT_MTG/releases/2023-09-24/AIT_MTG.json
 - prefix: /releases/
-  replacement: https://raw.githubusercontent.com/hkir-dev/human-neocortex-middle-temporal-gyrus/v
+  replacement: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/v
   tests:
     - from: /releases/2023-09-24/
-      to: https://raw.githubusercontent.com/hkir-dev/human-neocortex-middle-temporal-gyrus/v2023-09-24/
+      to: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/v2023-09-24/
+
+# This config should be the last item since it will catch all remaining paths
+# https://purl.brain-bican.org/taxonomy/AIT_MTG/accession_id
+- regex: ^/taxonomy/AIT_MTG/(.*)$
+  replacement: https://brain-bican.github.io/human-neocortex-middle-temporal-gyrus/cell_sets/$1
+  tests:
+  - from: /AIT_MTG/AIT_MTG_1
+    to: https://brain-bican.github.io/human-neocortex-middle-temporal-gyrus/cell_sets/AIT_MTG_1
