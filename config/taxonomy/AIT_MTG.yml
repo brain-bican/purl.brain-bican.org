@@ -6,7 +6,7 @@ base_url: /taxonomy/AIT_MTG
 products:
 - AIT_MTG.json: https://raw.githubusercontent.com/brain-bican/human-neocortex-middle-temporal-gyrus/main/AIT_MTG.json
 
-base_redirect: https://github.com/brain-bican/human-neocortex-middle-temporal-gyrus
+base_redirect: https://brain-bican.github.io/human-neocortex-middle-temporal-gyrus/
 
 entries:
 
