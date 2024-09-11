@@ -1,0 +1,30 @@
+# PURL configuration for https://purl.brain-bican.org/taxonomy/AIT117
+
+idspace: AIT117
+base_url: /taxonomy/AIT117
+
+products:
+- AIT117.json: https://raw.githubusercontent.com/Cellular-Semantics/nhp_basal_ganglia_macaque_taxonomy/main/AIT117.json
+
+base_redirect: https://cellular-semantics.github.io/nhp_basal_ganglia_macaque_taxonomy
+
+entries:
+
+# https://purl.brain-bican.org/taxonomy/AIT117/AIT117.json
+- exact: /AIT117.json
+  replacement: https://raw.githubusercontent.com/Cellular-Semantics/nhp_basal_ganglia_macaque_taxonomy/main/AIT117.json
+
+# https://purl.brain-bican.org/taxonomy/AIT117/releases/2023-09-24/AIT117.json
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/Cellular-Semantics/nhp_basal_ganglia_macaque_taxonomy/v
+  tests:
+    - from: /releases/2023-09-24/
+      to: https://raw.githubusercontent.com/Cellular-Semantics/nhp_basal_ganglia_macaque_taxonomy/v2023-09-24/
+
+# This config should be the last item since it will catch all remaining paths
+# https://purl.brain-bican.org/taxonomy/AIT117/AIT117_41
+- regex: ^/taxonomy/AIT117/AIT117_(.*)$
+  replacement: https://cellular-semantics.github.io/nhp_basal_ganglia_macaque_taxonomy/cell_sets/AIT117_$1
+  tests:
+  - from: /AIT117/AIT117_41
+    to: https://cellular-semantics.github.io/nhp_basal_ganglia_macaque_taxonomy/cell_sets/AIT117_41
