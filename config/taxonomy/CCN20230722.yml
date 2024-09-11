@@ -6,7 +6,7 @@ base_url: /taxonomy/CCN20230722
 products:
 - CCN20230722.json: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_taxonomy/main/CCN20230722.json
 
-base_redirect: https://brain-bican.github.io/whole_mouse_brain_taxonomy
+base_redirect: https://cellular-semantics.github.io/whole_mouse_brain_taxonomy
 
 entries:
 
