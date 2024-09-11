@@ -27,4 +27,4 @@ entries:
   replacement: https://cellular-semantics.github.io/whole_mouse_brain_taxonomy/cell_sets/CS20230722_$1
   tests:
   - from: /CCN20230722/CS20230722_CLAS_01
-    to: https://cellular-semantics.github.io/$$PROJECT_REPO$$/cell_sets/CS20230722_CLAS_01
+    to: https://cellular-semantics.github.io/whole_mouse_brain_taxonomy/cell_sets/CS20230722_CLAS_01
