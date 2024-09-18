@@ -15,6 +15,8 @@ term_browser: ols
 example_terms:
 - HBA_0000000
 
+base_redirect: https://github.com/brain-bican/human_brain_atlas_ontology
+
 entries:
 
 # https://purl.brain-bican.org/ontology/hbao/hbao-base.owl
