@@ -20,7 +20,7 @@ base_redirect: https://github.com/brain-bican/human_brain_atlas_ontology
 entries:
 
 # OLS resolution for HBA Terms
-- regex: ^/ontology/dhbao/HBA_(\d+)$
+- regex: ^/ontology/hbao/HBA_(\d+)$
   replacement: https://www.ebi.ac.uk/ols4/ontologies/hba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fhbao%252FHBA_$1
   tests:
   - from: /hbao/HBA_4697
