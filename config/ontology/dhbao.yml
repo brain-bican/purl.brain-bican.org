@@ -11,7 +11,7 @@ products:
 - dhbao.obo: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
 - dhbao.json: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
 
-term_browser: ols
+term_browser: custom
 example_terms:
 - DHBA_0000000
 
