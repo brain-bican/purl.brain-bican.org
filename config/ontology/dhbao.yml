@@ -11,7 +11,7 @@ products:
 - dhbao.obo: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
 - dhbao.json: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.obo
 
-term_browser: ols
+term_browser: custom
 example_terms:
 - DHBA_0000000
 
@@ -19,6 +19,13 @@ base_redirect: https://github.com/brain-bican/developing_human_brain_atlas_ontol
 
 entries:
 
+# OLS resolution for DHBA Terms
+- regex: ^/ontology/dhbao/DHBA_(\d+)$
+  replacement: https://www.ebi.ac.uk/ols4/ontologies/dhba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fdhbao%252FDHBA_$1
+  tests:
+  - from: /dhbao/DHBA_11218
+    to: https://www.ebi.ac.uk/ols4/ontologies/dhba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fdhbao%252FDHBA_11218
+    
 # https://purl.brain-bican.org/ontology/dhbao/dhbao-base.owl
 - exact: /dhbao-base.owl
   replacement: https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao-base.owl
