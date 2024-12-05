@@ -6,7 +6,7 @@ base_url: /taxonomy/CS202210140
 products:
 - CS202210140_non-neuronal.json: https://raw.githubusercontent.com/brain-bican/human-brain-cell-atlas_v1_non-neuronal/main/CS202210140.json
 - CS202210140_neurons.json: https://raw.githubusercontent.com/brain-bican/human-brain-cell-atlas_v1_neurons/main/CS202210140.json
-- CCN202210140.csv: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
+#- CCN202210140.csv: https://raw.githubusercontent.com/hkir-dev/whole_human_brain_ontology/main/src/dendrograms/nomenclature_table_CS202210140.csv
 
 base_redirect: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuronal/
 
