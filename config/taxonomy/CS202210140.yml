@@ -12,6 +12,14 @@ base_redirect: https://brain-bican.github.io/human-brain-cell-atlas_v1_non-neuro
 
 entries:
 
+# https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_non-neuronal.h5ad
+- exact: /CS202210140_non-neuronal.h5ad
+   replacement: https://cellular-semantics.cog.sanger.ac.uk/public/merged_Siletti_All_non-neuronal.h5ad  
+
+# https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_neurons.h5ad
+- exact: /CS202210140_neurons.h5ad
+   replacement: https://cellular-semantics.cog.sanger.ac.uk/public/merged_Siletti_All_neurons.h5ad  
+   
 # https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_non-neuronal.json
 # https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_neurons.json
 - regex: ^/taxonomy/CS202210140/CS202210140_(.*)\.json$
@@ -19,6 +27,14 @@ entries:
   tests:
   - from: /CS202210140/CS202210140_neurons.json
     to: https://raw.githubusercontent.com/brain-bican/human-brain-cell-atlas_v1_neurons/main/CS202210140.json
+
+# https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_non-neuronal.html
+# https://purl.brain-bican.org/taxonomy/CS202210140/CS202210140_neurons.html
+- regex: ^/taxonomy/CS202210140/CS202210140_(.*)\.html$
+  replacement: https://brain-bican.github.io/human-brain-cell-atlas_v1_$1/
+  tests:
+  - from: /CS202210140/CS202210140_neurons.html
+    to: https://brain-bican.github.io/human-brain-cell-atlas_v1_neurons/
 
 # https://purl.brain-bican.org/taxonomy/CS202210140/releases/2023-12-20/CS202210140_non-neuronal.json
 - regex: ^/taxonomy/CS202210140/releases/(.*)/CS202210140_(.*)\.owl$
