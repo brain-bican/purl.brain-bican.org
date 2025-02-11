@@ -15,7 +15,16 @@ term_browser: ols
 example_terms:
 - DMBA_0000000
 
+base_redirect: https://github.com/brain-bican/developing_mouse_brain_atlas_ontology
+
 entries:
+
+# OLS resolution for DMBA Terms
+- regex: ^/ontology/dmbao/DMBA_(\d+)$
+  replacement: https://www.ebi.ac.uk/ols4/ontologies/dmba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fdmbao%252FDMBA_$1
+  tests:
+  - from: /dmbao/DMBA_17736
+    to: https://www.ebi.ac.uk/ols4/ontologies/dmba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fdmbao%252FDMBA_17736
 
 # https://purl.brain-bican.org/ontology/dmbao/dmbao-base.owl
 - exact: /dmbao-base.owl
