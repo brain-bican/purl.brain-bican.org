@@ -11,11 +11,20 @@ products:
 - mbao.obo: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.obo
 - mbao.json: https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.obo
 
-term_browser: ols
+term_browser: custom
 example_terms:
 - MBA_0000000
 
+base_redirect: https://github.com/brain-bican/mouse_brain_atlas_ontology
+
 entries:
+
+# OLS resolution for MBA Terms
+- regex: ^/ontology/mbao/MBA_(\d+)$
+  replacement: https://www.ebi.ac.uk/ols4/ontologies/mba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fmbao%252FMBA_$1
+  tests:
+  - from: /mbao/MBA_997
+    to: https://www.ebi.ac.uk/ols4/ontologies/mba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fmbao%252FMBA_997
 
 # https://purl.brain-bican.org/ontology/mbao/mbao-base.owl
 - exact: /mbao-base.owl
