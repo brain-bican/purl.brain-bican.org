@@ -19,7 +19,7 @@ base_redirect: https://github.com/brain-bican/mouse_brain_atlas_ontology
 
 entries:
 
-# OLS resolution for MBA Terms
+# OLS resolution for the MBA Terms
 - regex: ^/ontology/mbao/MBA_(\d+)$
   replacement: https://www.ebi.ac.uk/ols4/ontologies/mba/terms/https%253A%252F%252Fpurl.brain-bican.org%252Fontology%252Fmbao%252FMBA_$1
   tests:
