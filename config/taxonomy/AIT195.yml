@@ -1,0 +1,34 @@
+# PURL configuration for https://purl.brain-bican.org/taxonomy/AIT195
+
+idspace: AIT195
+base_url: /taxonomy/AIT195
+
+products:
+- AIT195.json: https://raw.githubusercontent.com/brain-bican/basal_ganglia_human_taxonomy/refs/heads/cloud-rltbl/AIT195.json
+
+base_redirect: https://github.com/brain-bican/basal_ganglia_human_taxonomy/tree/cloud-rltbl
+
+entries:
+
+# https://purl.brain-bican.org/taxonomy/AIT195/AIT195.json
+- exact: /AIT195.json
+  replacement: https://raw.githubusercontent.com/brain-bican/basal_ganglia_human_taxonomy/refs/heads/cloud-rltbl/AIT195.json
+
+# https://purl.brain-bican.org/taxonomy/AIT195/AIT195.h5ad
+# - exact: /AIT195.h5ad
+#   replacement: https://cellular-semantics.cog.sanger.ac.uk/public/HMBA_Macaque_BG_082024_AIT_to_CAP_merged.h5ad  
+
+# https://purl.brain-bican.org/taxonomy/AIT195/releases/2023-09-24/AIT195.json
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/brain-bican/basal_ganglia_human_taxonomy/v
+  tests:
+    - from: /releases/2023-09-24/
+      to: https://raw.githubusercontent.com/brain-bican/basal_ganglia_human_taxonomy/v2023-09-24/
+
+# This config should be the last item since it will catch all remaining paths
+# https://purl.brain-bican.org/taxonomy/AIT195/AIT195_41
+# - regex: ^/taxonomy/AIT195/AIT195_(.*)$
+#   replacement: https://cellular-semantics.github.io/nhp_basal_ganglia_macaque_taxonomy/cell_sets/AIT117_$1
+#   tests:
+#   - from: /AIT195/AIT195_41
+#     to: https://cellular-semantics.github.io/nhp_basal_ganglia_macaque_taxonomy/cell_sets/AIT117_41
