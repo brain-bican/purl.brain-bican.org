@@ -22,7 +22,7 @@ entries:
       to: https://raw.githubusercontent.com/brain-bican/whole_mouse_brain_taxonomy/v2023-09-24/
 
 # https://purl.brain-bican.org/taxonomy/CCN20230722/CS20230722_CLAS_01.h5ad
-- regex: ^/taxonomy/CCN20230722/CS20230722_(.*).h5ad$
+- regex: ^/taxonomy/CCN20230722/(.*).h5ad$
   replacement: https://cellular-semantics.cog.sanger.ac.uk/public/merged_$1.h5ad
   tests:
   - from: /CCN20230722/CS20230722_CLAS_01.h5ad
