@@ -29,13 +29,13 @@ entries:
   replacement: https://github.com/Cellular-Semantics/whole_mouse_brain_ontology/releases/latest/download/wmbo-base.json
 
 - exact: /wmbo-cl-comp.owl
-  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/cl_product/wmbo-cl-comp.owl
+  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/main/wmbo-cl-comp.owl
 
 - exact: /wmbo-cl-comp.obo
-  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/cl_product/wmbo-cl-comp.obo
+  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/main/wmbo-cl-comp.obo
 
 - exact: /wmbo-cl-comp.json
-  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/cl_product/wmbo-cl-comp.json
+  replacement: https://raw.githubusercontent.com/Cellular-Semantics/whole_mouse_brain_ontology/main/wmbo-cl-comp.json
 
 
 ## generic fall-through, serve direct from github release by default
